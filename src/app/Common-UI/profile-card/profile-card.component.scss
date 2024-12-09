@@ -1,9 +1,10 @@
 .profile-card {
     border: 1px solid var(--light-color);
-    padding: 32px, 24px;
+    padding: 32px 24px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 32px;
+}
 
     .avatar-name {
         display: grid;
@@ -12,9 +13,15 @@
     }
 
     .profile-card__avatar {
-        width: 70;
-        height: 70;
+        width: 50;
+        height: 50;
         border-radius: 50%;
         overflow: hidden;
     }
-}
+
+    .profile-card__name {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
