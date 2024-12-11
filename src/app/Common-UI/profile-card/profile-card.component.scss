@@ -15,10 +15,11 @@
 
 
     .profile-card__avatar {
-        width: 50;
-        height: 50;
+        width: 440;
+        height: 440;
         border-radius: 50%;
         overflow: hidden;
+        object-fit: cover;
     }
 
 
