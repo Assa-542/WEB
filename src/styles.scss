@@ -1,8 +1,8 @@
 @import 'fonts';
 
 :root {
-    --dark-color: #000000;
-    --light-color: #FFFFFF;
+    --dark-color: #080a0a63;
+    --light-color: #eae4e4;
     --primary-color: #AE7AFF;
 }
 
@@ -13,20 +13,25 @@ body {
 }
 
 .skill-tag {
-    padding: 4px 8 px;
+    padding: 4px 8px;
     border-radius: 4px;
-    border: 1px solid var(--light-color);
+    border: 10px solid var(--light-color);
     display: inline;
     font-size: 12px;
     font-weight: 700;
     margin-right: 4px;
 }
 
+
 .btn {
     border: none;
     background: var(--primary-color);
     color: var(--dark-color);
-    padding: 10px 20 px
+    padding: 10px 20 px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+
 }
 
 .h6 {
