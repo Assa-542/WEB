@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { ProfileCardComponent } from "./Common-UI/profile-card/profile-card.component";
 import { ProfileService } from './data/services/profile.service';
 import { observeOn } from 'rxjs';
+import { JsonPipe } from 
 
 @Component({
   selector: 'app-root',
@@ -13,14 +14,18 @@ import { observeOn } from 'rxjs';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  profileService :ProfileService = inject(ProfileService)
-  profiles: any = []
+  profileService = inject(ProfileService)
+  profiles: any= []
+json: any;
 
   constructor () {
     this.profileService.getTestAccounts()
     .subscribe(val => {
-      this.profile = val
-    })
-  }
+      this.profiles = val
+  })
 
 }
+
+}
+
+
