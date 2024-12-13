@@ -15,14 +15,12 @@ import { observeOn } from 'rxjs';
 export class AppComponent {
   profileService :ProfileService = inject(ProfileService)
   profiles: any = []
-json: any;
 
   constructor () {
     this.profileService.getTestAccounts()
-      .subscribe(val)
-      })
-      
-
+    .subscribe(val => {
+      this.profile = val
+    })
   }
 
 }

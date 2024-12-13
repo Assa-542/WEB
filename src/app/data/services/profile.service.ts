@@ -11,6 +11,6 @@ http :HttpClient = inject(HttpClient)
 baseApiUrl:string = 'https//icherniakov.ru/yt-course/'
 
   getTestAccounts() :void {
-    this.http.get('${this.baseApiUrl}account/test_accounts')
+   return this.http.get('${this.baseApiUrl}account/test_accounts')
   }
 }
