@@ -13,6 +13,10 @@ import { JsonPipe } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+json: any;
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   profileService = inject(ProfileService)
   profiles: any [] = []
 
@@ -25,7 +29,7 @@ export class AppComponent {
 
 
 
-  
+
   }
 }
 
