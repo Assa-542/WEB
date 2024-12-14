@@ -3,11 +3,10 @@ import { RouterOutlet } from '@angular/router';
 import { ProfileCardComponent } from "./Common-UI/profile-card/profile-card.component";
 import { ProfileService } from './data/services/profile.service';
 import { JsonPipe } from '@angular/common';
-import { Profile } from './data/interfaces/profile.interface';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProfileCardComponent,],
+  imports: [RouterOutlet, ProfileCardComponent,JsonPipe],
   
   
   templateUrl: './app.component.html',
@@ -15,7 +14,7 @@ import { Profile } from './data/interfaces/profile.interface';
 })
 export class AppComponent {
   profileService = inject(ProfileService)
-  profiles: Profile[] = []
+  profiles: any [] = []
 
   constructor () {
     this.profileService.getTestAccounts()
@@ -23,8 +22,11 @@ export class AppComponent {
       this.profiles = val
   })
 
-}
 
+
+
+  
+  }
 }
 
 

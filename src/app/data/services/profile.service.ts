@@ -9,9 +9,9 @@ export class ProfileService {
 http :HttpClient = inject(HttpClient)
   constructor() { }
 
-baseApiUrl:string = 'https://icherniakov.ru/yt-course/'
+baseApiUrl = 'https://icherniakov.ru/yt-course/'
 
   getTestAccounts() {
-   return this.http.get<Profile[]>('https://icherniakov.ru/yt-course/account/test_accounts')
+   return this.http.get<Profile[]>('${this.baseApiUrl}/account/test_accounts')
   }
 }
