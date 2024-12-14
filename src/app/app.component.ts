@@ -2,12 +2,12 @@ import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProfileCardComponent } from "./Common-UI/profile-card/profile-card.component";
 import { ProfileService } from './data/services/profile.service';
-import { observeOn } from 'rxjs';
-import { JsonPipe } from 
+import { JsonPipe } from '@angular/common';
+import { Profile } from './data/interfaces/profile.interface';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProfileCardComponent],
+  imports: [RouterOutlet, ProfileCardComponent,],
   
   
   templateUrl: './app.component.html',
@@ -15,8 +15,7 @@ import { JsonPipe } from
 })
 export class AppComponent {
   profileService = inject(ProfileService)
-  profiles: any= []
-json: any;
+  profiles: Profile[] = []
 
   constructor () {
     this.profileService.getTestAccounts()
