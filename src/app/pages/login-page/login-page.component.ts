@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
   styleUrl: './login-page.component.scss'
 })
   export class LoginPageComponent {
-  authService = inject(AuthService)
+    authService = inject(AuthService)
   router = inject(Router)
 
   form = new FormGroup ({

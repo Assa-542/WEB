@@ -13,6 +13,6 @@ export const routes: Routes = [
     ],
     canActivate: [canActivateAuth]
    },
-    
+   
     {path: 'login', component: LoginPageComponent}
 ];
