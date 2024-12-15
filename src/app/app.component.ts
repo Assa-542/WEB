@@ -2,11 +2,11 @@ import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProfileCardComponent } from "./Common-UI/profile-card/profile-card.component";
 import { ProfileService } from './data/services/profile.service';
-import { JsonPipe } from '@angular/common';
+import { Profile } from './data/interfaces/profile.interface';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProfileCardComponent,JsonPipe],
+  imports: [RouterOutlet, ProfileCardComponent,],
   
   
   templateUrl: './app.component.html',
@@ -14,11 +14,12 @@ import { JsonPipe } from '@angular/common';
 })
 export class AppComponent {
 json: any;
+profile: any;
   title(title: any) {
     throw new Error('Method not implemented.');
   }
   profileService = inject(ProfileService)
-  profiles: any [] = []
+  profiles: Profile[] = []
 
   constructor () {
     this.profileService.getTestAccounts()
