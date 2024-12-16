@@ -22,7 +22,7 @@ import { Router } from '@angular/router';
     password: new FormControl<string | null>(null, Validators.required)
   })
 
-  onsubmit() {
+  onsubmit(event: Event) {
     if (this.form.valid) {
       //@ts-ignore
       this.authService.login(this.form.value)
