@@ -30,6 +30,6 @@ import { Router } from '@angular/router';
         this.router.navigate([''])
         console.log(res)
       })
-  }
+    }
   }
 }
