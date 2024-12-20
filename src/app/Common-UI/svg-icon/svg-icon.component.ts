@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-svg-icon',
-  imports: [],
-  template: '<svg:use [attr,href]="href"></svg:use>',
+  selector: 'svg[icon]',
+  imports: [
+  ],
+  standalone: true,
+  template: '<svg:use [attr.href]="href"></svg:use>',
   styles: ['']
 })
 export class SvgIconComponent {
@@ -11,6 +13,6 @@ export class SvgIconComponent {
 
 
 get href () {
-  return '/Assets/svg/$(this.icon).svg'
+  return `/Assets/svg/${this.icon}.svg#${this.icon}`;
   }
 }

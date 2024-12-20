@@ -17,20 +17,45 @@
     color: var(--light-color);
     display: grid;
     grid-template-columns: 16px 1fr max-content;
-    align-items: center;
     grid-gap: 12px;
+    align-items: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
     width: 100%;
     text-align: left;
     border-radius: 2px;
-    
 
 
     &:hover,
     &:focus-visible {
         background: var(--dark-hover-color);
         color: var(--primary-color);
+    
+        .menu-item svg{
+            color: var(--primary-color);
+        }
     }
+  }
+
+
+.menu-item svg {
+    width: 16px;
+    height: 16px;
+}
+
+.to-subscibers {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.to-subscribers-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.to-subscibers-icon {
+    width: 18px;
+    height: 18px;
 }

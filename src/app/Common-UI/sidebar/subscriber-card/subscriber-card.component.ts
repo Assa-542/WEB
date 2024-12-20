@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
+import { Profile } from '../../../data/interfaces/profile.interface';
 import { ImgUrlPipe } from "../../../helpers/pipes/img-url.pipe";
 
 @Component({
@@ -8,6 +9,6 @@ import { ImgUrlPipe } from "../../../helpers/pipes/img-url.pipe";
   styleUrl: './subscriber-card.component.scss'
 })
 export class SubscriberCardComponent {
-profile: any;
+  @Input() profile!: Profile
 
 }
