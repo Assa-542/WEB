@@ -46,4 +46,12 @@ export class SidebarComponent {
       link: 'search'
     },
   ]
+
+  ngOnInit() {
+    firstValueFrom(this.profileService.getMe())
+  }
+
 }
+
+
+
