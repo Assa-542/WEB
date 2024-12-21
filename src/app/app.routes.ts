@@ -7,9 +7,9 @@ import { canActivateAuth } from './auth/aceess.guard';
 
 export const routes: Routes = [
     {
-        path: '', component: LayoutsComponent, children:[
+    path: '', component: LayoutsComponent, children:[
         {path: '', component: SearchPageComponent},
-        {path: 'profile', component: ProfilePageComponent}
+        {path: 'profile/:id', component: ProfilePageComponent}
     ],
     canActivate: [canActivateAuth]
    },
