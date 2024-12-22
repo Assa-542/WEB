@@ -4,7 +4,7 @@ import { ProfileCardComponent } from "./Common-UI/profile-card/profile-card.comp
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProfileCardComponent,],
+  imports: [RouterOutlet],
   
   
   templateUrl: './app.component.html',

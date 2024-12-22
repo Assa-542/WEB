@@ -13,12 +13,8 @@ import {SubscriberCardComponent} from './subscriber-card/subscriber-card.compone
   imports: [
     SvgIconComponent,
     NgForOf,
-    SubscriberCardComponent,
-    AsyncPipe,
-    JsonPipe,
     RouterLink,
     ImgUrlPipe,
-    RouterLinkActive
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
