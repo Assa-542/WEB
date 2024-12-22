@@ -43,4 +43,25 @@ export class ProfileService {
     )
 }
 
+uploadAvatar(file: File) {
+  const fd = new FormData()
+  fd.append('image', file)
+  return this.http.post<Profile>(
+    `${this.baseApiUrl}account/upload_Image`,
+    fd
+  )
+}
+
+
+filterProfiles(params: Record<string, any>) {
+  return this.http.get<Pageble<Profile>>(
+    `${this.baseApiUrl}account/accounts`,
+    {
+      params
+    }
+  ).pipe(
+    tap(res => this.filteredProfiles.set(res.items))
+  )
+}
+
 }
